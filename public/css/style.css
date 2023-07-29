@@ -1,0 +1,70 @@
+body {
+  /* Establece la imagen de fondo */
+  background-image: url("/images/imagen.jpg");
+  /* Establece el tamaño y comportamiento de la imagen de fondo */
+  background-size: cover;
+  /* Opcional: Establece el color de fondo para que se muestre mientras carga la imagen */
+  background-color: #f0f0f0;
+}
+
+ .container {
+      padding: 3rem 0;
+      height: 100%;
+    }
+
+    .card {
+      border-radius: 1rem;
+    }
+
+    .card-body {
+      padding: 2rem 1rem;
+    }
+
+    h1, h3, h5 {
+      text-align: center;
+    }
+
+    form {
+      font-size: 16px;
+      margin-top: 2rem;
+    }
+
+    .form-label {
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .form-control {
+      margin-bottom: 1rem;
+    }
+
+    .btn-success {
+      background-color: #28a745;
+      color: #fff;
+      font-size: 18px;
+      font-weight: bold;
+      border: none;
+      width: 100%;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      cursor: pointer;
+    }
+
+    .btn-success:hover {
+      background-color: #218838;
+    }
+
+    select {
+      width: 100%;
+      padding: 0.5rem;
+      font-size: 16px;
+    }
+
+    ol {
+      list-style-type: decimal;
+      padding-left: 1.5rem;
+    }
+
+    li {
+      margin-bottom: 1rem;
+    }

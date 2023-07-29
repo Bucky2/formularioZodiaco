@@ -1,0 +1,189 @@
+<%- include('./partials/head') %>
+  <!DOCTYPE html>
+  <html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zodiaco</title>
+    <link rel="stylesheet" href="/css/style.css">
+  </head>
+<style>
+</style>
+  <body>
+
+    <div>
+      <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+          <div class="col-xl-10">
+            <div class="card rounded-3 text-black">
+              <div class="container">
+                <div class="card-body p-md-5 mx-md-4">
+
+                  <h1
+                    style=" font-family: 'Lora', 'Georgia', 'sans-serif'; text-align: center;">"Tu verdadero Zodiaco"</h1>
+
+                  <h3  class="mt-5"
+                    style=" font-family: 'Lora', 'Georgia', 'sans-serif'; text-align: center;">¡Descubre tu verdadero signo!</h3>
+                  <h5
+                    style="text-align: center; font-family: 'Lora', 'Georgia', 'sans-serif'; text-align: center; size: 30px;">
+       
+                    <form id="myForm" action="/submit" method="POST" class="mt-4 needs-validation" novalidate>
+                      <div class="row">
+                        <div class="col-md">
+                          <div class="mb-3">
+                            <label for="name" for="validationCustom03" class="form-label">Nombre completo: </label>
+                            <input type="text" id="name validationCustom03" name="name" class="form-control"
+                              placeholder="Tu nombre" required>
+                          </div>
+                        </div>
+                      </div>
+                      <ol>
+                        <li class="mb-3">
+                          <label for="validationCustom04" id="Question 1" class="form-label">¿Qué características crees que te definen como persona?</label>
+                          <select id="validationCustom04" name="answer1" class="form-select" required>
+                            <option selected disabled value="">Selecciona una opcion</option>
+                            <option value="1">ser equilibrado, justo, sociable y amante de la armonía.</option>
+                            <option value="2">apasionado, decidido, intenso y misterioso.</option>
+                            <option value="3"> aventurero, optimista, independiente y filosófico.</option>
+                            <option value="4"> ambicioso, responsable, disciplinado y perseverante.</option>
+                            <option value="5">original, humanitario, independiente y visionario.</option>
+                            <option value="6"> compasiva, sensible, imaginativa y empático.</option>
+                          </select>
+                        </li>
+                        <li class="mb-3">
+                          <label id="Question 2" class="form-label">¿Cuál de estas comidas prefieres?</label>
+                          <select name="answer2" class="form-select" required>
+                            <option selected disabled value="">Selecciona una opcion</option>
+                            <option value="1">Una ensalada</option>
+                            <option value="2">Cualquier cosa con picante</option>
+                            <option value="3">Una paella</option>
+                            <option value="4">Filete</option>
+                            <option value="5">Sushi</option>
+                            <option value="6">mariscos</option>
+                          </select>
+                        </li>
+                        <li class="mb-3">
+                          <label id="Question 3" class="form-label">¿Cuál de las siguientes actividades te atren mas?</label>
+                          <select name="answer3" class="form-select" required>
+                            <option selected disabled value="">Selecciona una opcion</option>
+                            <option value="1">artísticas y sociales</option>
+                            <option value="2">Escritura y la investigación</option>
+                            <option value="3">Senderismo y los deportes extremos </option>
+                            <option value="4">Dedicarme al trabajo personal </option>
+                            <option value="5">la programación y el arte digital</option>
+                            <option value="6">Escuchar musica </option>
+                          </select>
+                        </li>
+                        <li class="mb-3">
+                          <label id="Question 4" class="form-label">¿Cómo te relacionas con los demás en un entorno social?</label>
+                          <select name="answer4" class="form-select" required>
+                            <option selected disabled value="">Selecciona una opcion</option>
+                            <option value="1">Amigable y diplomática </option>
+                            <option value="2"> intensa y profunda, valorando la lealtad y la sinceridad </option>
+                            <option value="3">abierta y extrovertida
+                            </option>
+                            <option value="4">
+                              seria y responsable, enfocándome en construir relaciones duraderas basadas en la confianza
+                            </option>
+                            <option value="5"> amigable y desapegada </option>
+                            <option value="6">empática y comprensiva</option>
+                          </select>
+                        </li>
+                        <li class="mb-3">
+                          <label id="Question 5" class="form-label">¿Qué te hace sentir más emocionado en la vida?</label>
+                          <select name="answer5" class="form-select" required>
+                            <option selected disabled value="">Selecciona una opcion</option>
+                            <option value="1">Sentir armonía en mis relaciones y disfrutar de experiencias sociales significativas.</option>
+                            <option value="2">Experimentar situaciones intensas y descubrir la verdad en las relaciones y en mí mismo/a.</option>
+                            <option value="3">La emoción de la aventura y la posibilidad de explorar nuevos lugares y culturas.</option>
+                            <option value="4">Lograr mis metas y alcanzar el éxito en mis esfuerzos personales y profesionales.</option>
+                            <option value="5">La emoción de ser parte de proyectos innovadores y contribuir al cambio y progreso social.</option>
+                            <option value="6">Sentirme conectado/a emocionalmente con los demás y experimentar momentos de profunda inspiración y creatividad.</option>
+                          </select>
+                        </li>
+                        <li class="mb-3">
+                          <label id="Question 6" class="form-label">¿Cuál es tu enfoque principal en la toma de decisiones importantes?</label>
+                          <select name="answer6" class="form-select" required>
+                            <option selected disabled value="">Selecciona una opcion</option>
+                            <option value="1">Busco encontrar un equilibrio y considerar las opiniones de todos los involucrados.</option>
+                            <option value="2">Me enfoco en analizar la situación a fondo y seguir mi intuición.</option>
+                            <option value="3">Mi enfoque está en tomar decisiones que me permitan crecer y explorar nuevas oportunidades</option>
+                            <option value="4">Me baso en la planificación estratégica y la evaluación de los pros y contras.</option>
+                            <option value="5">Prefiero tomar decisiones que se alineen con mis valores y principios de justicia social.</option>
+                            <option value="6">Sigo mi corazón y tomo decisiones que reflejen mis sentimientos y empatía hacia los demás.</option>
+                          </select>
+                        </li>
+                        <li class="mb-3">
+                          <label id="Question 7" class="form-label">¿Cuál de las siguiente situaciones crees que manejas mejor las situaciones estresantes?</label>
+                          <select name="answer7" class="form-select" required>
+                            <option selected disabled value="">Selecciona una opcion</option>
+                            <option value="1">Prefiero abordar el estrés buscando soluciones pacíficas y buscando el equilibrio emocional.</option>
+                            <option value="2">Enfrento el estrés con determinación y capacidad para mantener la calma bajo presión.</option>
+                            <option value="3">Manejo el estrés adoptando una actitud optimista y buscando la distracción con actividades divertidas.</option>
+                            <option value="4">En situaciones estresantes, me enfoco en mantener la compostura y seguir un plan estructurado.</option>
+                            <option value="5">Me enfrento al estrés con creatividad y buscando soluciones originales y fuera de lo convencional.</option>
+                            <option value="6">Frente al estrés, tiendo a refugiarme en la introspección y encontrar consuelo en mi mundo emocional.</option>
+                          </select>
+                        </li>
+                        <li class="mb-3">
+                          <label id="Question 8" class="form-label">¿Qué te motiva a perseguir tus metas y sueños?</label>
+                          <select name="answer8" class="form-select" required>
+                            <option selected disabled value="">Selecciona una opcion</option>
+                            <option value="1">Me motiva la búsqueda de la armonía y la satisfacción personal en mis logros.</option>
+                            <option value="2">Mi motivación proviene de mi deseo de superar desafíos y alcanzar el éxito a cualquier costo.</option>
+                            <option value="3">Me motiva la sed de aventura y el deseo de expandir mis horizontes y conocimientos.</option>
+                            <option value="4">Me motiva mi ambición y mi impulso para lograr el reconocimiento y el progreso profesional.</option>
+                            <option value="5">Mi motivación radica en mi deseo de crear un impacto positivo en el mundo y contribuir al cambio social.</option>
+                            <option value="6">Me motiva mi imaginación y mi deseo de ayudar y conectar emocionalmente con los demás.</option>
+                          </select>
+                        </li>
+                        <li class="mb-3">
+                          <label id="Question 9" class="form-label">¿Cuál de las siguientes personalidades admiras mas?</label>
+                          <select name="answer9" class="form-select" required>
+                            <option selected disabled value="">Selecciona una opcion</option>
+                            <option value="1">Admiro a las personas que son justas y equilibradas en sus decisiones y acciones.</option>
+                            <option value="2">Admiro a las personas que son valientes y auténticas, que enfrentan la verdad sin miedo.</option>
+                            <option value="3">Admiro a las personas aventureras y con una mente abierta que buscan constantemente nuevas experiencias.</option>
+                            <option value="4">Admiro a las personas disciplinadas y ambiciosas que alcanzan el éxito a través de su esfuerzo constante.</option>
+                            <option value="5">Admiro a las personas que son originales y tienen una visión única para cambiar el mundo.</option>
+                            <option value="6">Admiro a las personas compasivas y empáticas que se preocupan genuinamente por los demás y el bienestar del mundo.</option>
+                          </select>
+                        </li>
+                        <li class="mb-3">
+                          <label id="Question 10" class="form-label">¿Cuál es tu reacción típica ante los cambios inesperados?</label>
+                          <select name="answer10" class="form-select" required>
+                            <option selected disabled value="">Selecciona una opcion</option>
+                            <option value="1">Me siento indeciso/a y busco encontrar el equilibrio en la nueva situación.</option>
+                            <option value="2">Me muestro cauteloso/a y analizo la situación antes de adaptarme.</option>
+                            <option value="3">Me muestro entusiasmado/a y veo el cambio como una oportunidad para crecer.</option>
+                            <option value="4">Me adapto de manera pragmática y busco encontrar una solución estable.</option>
+                            <option value="5">Me emociono con la novedad y abrazo el cambio como una oportunidad para innovar.</option>
+                            <option value="6">Me siento emocionalmente afectado/a y busco apoyo para navegar a través del cambio.</option>
+                          </select>
+                        </li>
+
+                      </ol>
+                      <br>
+                      <div class="form-group">
+                        <button type="submit" class="btn btn-success btn-block">
+                          Enviar
+                        </button>
+                      </div>
+                    </form>
+
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </body>
+
+  </html>
+  <script src="/js/index.js"></script>

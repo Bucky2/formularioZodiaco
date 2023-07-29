@@ -1,0 +1,50 @@
+<%- include('./partials/head') %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resultados del Formulario</title>
+  <!-- Link the custom CSS file for styling -->
+  <link rel="stylesheet" href="/css/custom-style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="row justify-content-center mt-5">
+      <div class="col-md-8">
+        <div class="card text-center">
+          <div class="card-body p-md-5">
+            <h1 class="card-title mb-4">Resultados del Formulario</h1>
+            <h3>Total de Resultados: <%= users.length %></h3>
+            <div class="row mt-5">
+              <div class="col-md-6">
+                <div class="card action-item">
+                  <div class="card-body">
+                    
+                    <a class="btn btn-primary btn-rounded" href="/download/excel" role="button">
+                      Descargar Excel
+                      <i class="fa-solid fa-file-excel"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="card action-item">
+                  <div class="card-body">
+                  
+                    <a class="btn btn-primary btn-rounded" href="/download/csv" role="button">
+                      Guardar CSV
+                      <i class="fa-solid fa-file-csv"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
