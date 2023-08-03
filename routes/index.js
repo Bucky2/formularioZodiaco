@@ -41,9 +41,6 @@ router.post('/submit', async (req, res) => {
 });
 
 
-
-
-// // Ruta de éxito - Muestra el signo zodiacal del usuario registrado
 router.get('/success/ACB1220100646', async (req, res) => {
   try {
     const users = await Data.find();
@@ -64,24 +61,21 @@ router.get('/download/excel', async (req, res) => {
   try {
     const users = await Data.find(); // Obtener todos los usuarios de la base de datos
 
-    // Crear un nuevo libro de Excel
+
     const workbook = new ExcelJS.Workbook();
     const worksheet = workbook.addWorksheet('resultados');
 
     // Escribir los encabezados en el archivo Excel
-    worksheet.addRow(['Name','Libra', 'Escorpio', 'Sagitario', 'Capricornio', 'Acuario', 'Piscis']);
+    worksheet.addRow(['Nombre','Libra', 'Escorpio']);
 
-    // Escribir los datos en el archivo Excel
+ 
     users.forEach(user => {
       const userData = [user.namel];
 
       const groupedAnswers = {
         1: 0,
         2: 0,
-        3: 0,
-        4: 0,
-        5: 0,
-        6: 0,
+        3: 0
       };
 
       user.answers.forEach(answer => {
@@ -123,24 +117,17 @@ router.get('/download/csv', async (req, res) => {
   try {
     const users = await Data.find(); // Obtener todos los usuarios de la base de datos
 
-    // Crear el contenido del archivo CSV
+
     const csvData = [];
 
-    // Agregar encabezados
-    csvData.push(['Name','Libra', 'Escorpio', 'Sagitario', 'Capricornio', 'Acuario', 'Piscis']);
+    csvData.push(['signo','Empatía', 'Creatividad:', 'Honestidad', 'Independencia']);
 
-    // Agregar los datos de los usuarios
+  
     users.forEach(user => {
-      const userData = [user.name];
-
-              // Crear un objeto para agrupar las respuestas por valor (1, 2, 3, 4, 5 o 6)
+      const userData = [user.name];      
               const groupedAnswers = {
                 1: 0,
                 2: 0,
-                3: 0,
-                4: 0,
-                5: 0,
-                6: 0,
               };      
 
       user.answers.forEach(answer => {
@@ -149,7 +136,7 @@ router.get('/download/csv', async (req, res) => {
           groupedAnswers[answerValue]++;
         }
       });
-      userData.push(groupedAnswers[1], groupedAnswers[2], groupedAnswers[3], groupedAnswers[4], groupedAnswers[5], groupedAnswers[6]);
+      userData.push(groupedAnswers[1], groupedAnswers[2]);
       csvData.push(userData);
     });
 

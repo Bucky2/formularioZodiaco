@@ -6,7 +6,7 @@ const userSchema = new mongoose.Schema({
   answers: [
     {
       question: { type: String },
-      answer: { type: Number, min: 1, max: 6 },
+      answer: { type: Number, min: 1, max: 2 },
     },
   ],
 });
